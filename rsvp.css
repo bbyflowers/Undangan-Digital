@@ -13,7 +13,7 @@ body {
 
 .left {
     width: 60%;
-    background-image: url('/Assets/gambar/image-cover.png'); 
+    background-image: url('image-cover.png'); 
     background-size: cover;
     background-position: fixed;
 }

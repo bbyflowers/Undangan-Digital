@@ -54,7 +54,7 @@ body {
 /* Gambar kiri tetap */
 .left {
     width: 60%;
-    background-image: url('/Assets/gambar/image-cover.png'); /* Sesuaikan dengan gambar */
+    background-image: url('image-cover.png'); /* Sesuaikan dengan gambar */
     background-size: cover;
     background-position: fixed;
 }
