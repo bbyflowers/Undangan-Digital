@@ -1,0 +1,276 @@
+body {
+    margin: 0;
+    background-color: #FCEDF2;
+}
+
+.gift-container {
+    font-family: "Farsan", cursive;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    opacity: 0;
+    animation: fadeIn 4s forwards;
+    text-align: center;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0; 
+    }
+    to {
+        opacity: 1; 
+    }
+}
+
+.container-full {
+    display: flex;
+    height: 100vh;
+    color: black;
+}
+
+.left {
+    width: 60%;
+    background-image: url('/Assets/gambar/image-cover.png'); 
+    background-size: cover;
+    background-position: fixed;
+}
+
+.undangan-box {
+    margin: 300px 150px 0px 150px;
+    padding: 10px;
+    text-align: center;
+    justify-content: center;
+    font-family: "Italianno", cursive;
+    font-size: 30px;
+    box-shadow: 3px 4px 3px 4px rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+    backdrop-filter: blur(2px);
+    font-weight: bold;
+    color: #1a0404;
+    background-color: #ffffff57 ;
+}
+
+.hubungi {
+    display: flex;
+    flex-direction: row;
+    font-size: 20px;
+    font-family: "farsan", cursive;
+    justify-content: center;
+}
+
+.t1 {
+    padding-right: 60px;
+    padding-left: 25px;
+}
+
+h3 {
+    font-family: "lobster", sans-serif;
+    font-size: 28px;
+}
+
+.right {
+    width: 40%;
+    overflow-y: scroll;
+    box-sizing: border-box;
+}
+
+.bg-isi-top {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: -50px;
+    width: 100%;
+    animation: slideIn 3s ease-out;
+}
+
+@keyframes slideIn {
+    from { transform: translateY(-100%);}
+    to { transform: translateY(0);}
+}
+
+@keyframes slideUp {
+    from {
+      transform: translateY(100%); 
+      opacity: 1; 
+    }
+    to {
+      transform: translateY(0); 
+      opacity: 1;
+    }
+}
+
+p {
+    font-size: 20px;
+    text-align: center;
+    margin: 30px 0;
+}
+
+
+.button-back {
+    font-size: 20px;
+    text-decoration: none;
+    color: black;
+}
+
+.back-button {
+    margin-top: 20px;
+    padding: 7px 50px;
+    border: 1px solid black;
+    border-radius: 8px;
+    background-color: #E56090;
+    box-shadow: 0 4px 4px  rgba(0, 0, 0, 0.3);
+}
+
+.back-button:hover {
+    background-color: black;
+    color: white;
+}
+
+.bg-isi-bottom {
+    max-width: 100%;
+    width: 100%;
+    animation: slideUp 3s ease-out;
+}
+
+.header {
+    margin-bottom: 40px;
+}
+
+.title {
+    font-family: 'Damion', cursive;
+    font-size: 30px;
+    color: #9B355A;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    font-size: 18px;
+    font-weight: 300;
+    color: #444;
+    margin-bottom: 30px;
+}
+
+/* Styling Gift Options */
+.gift-options {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 20px;
+}
+
+.gift-box {
+    justify-content: center;
+    background-color: white;
+    border: 2px solid #FFD7E4;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.gift-box:hover {
+    transform: scale(1.05);
+}
+
+.gift-image {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+.gift-title {
+    font-size: 25px;
+    color: #9B355A;
+    margin-bottom: 10px;
+    font-family: 'Damion', cursive;
+}
+
+.gift-description {
+    font-size: 18px;
+    color: #555;
+}
+
+/* Styling Footer */
+.footer {
+    margin-top: 40px;
+    font-size: 18px;
+    color: #555;
+    font-weight: 300;
+}
+
+@media (min-width: 0) and (max-width: 767px) {
+    .gift-options {
+        grid-template-columns: 1fr;
+    }
+
+    .gift-image {
+        width: 80px;
+        height: 80px;
+    }
+
+    .right {
+        width: 100%;
+    }
+    
+    .left {
+        width: 0;
+    }
+
+    .undangan-box {
+        visibility: hidden;
+    }
+
+    .hubungi {
+        visibility: hidden;
+    }
+
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    .gift-options {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .gift-image {
+        width: 100px;
+        height: 100px;
+    }
+
+    .right {
+        width: 100%;
+    }
+    
+    .left {
+        width: 0;
+    }
+
+    .undangan-box {
+        visibility: hidden;
+    }
+
+    .hubungi {
+        visibility: hidden;
+    }
+
+}
+
+@media (min-width: 1024px) and (max-width: 1500px) {
+    .gift-options {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .gift-image {
+        width: 120px;
+        height: 120px;
+    }
+
+    .right {
+        width: 40%;
+    }
+    
+    .left {
+        width: 60%;
+    }
+
+}

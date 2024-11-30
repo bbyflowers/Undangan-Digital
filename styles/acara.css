@@ -1,0 +1,420 @@
+body {
+    margin: 0;
+    background-color: #FCEDF2;
+}
+
+.bg-isi-top {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: -20px;
+    width: 100%;
+    animation: slideIn 3s ease-out;
+}
+
+@keyframes slideIn {
+    from { transform: translateY(-100%);}
+    to { transform: translateY(0);}
+}
+
+@keyframes slideUp {
+    from {
+      transform: translateY(100%); 
+      opacity: 1; 
+    }
+    to {
+      transform: translateY(0); 
+      opacity: 1;
+    }
+  }
+
+@keyframes moveRightToLeft {
+    0% {
+        left: 100%;
+    }
+    100% {
+        left: 0;
+    }
+}
+
+@keyframes moveLeftToRight {
+    0% {
+        Right: 100%;
+    }
+    100% {
+        Right: 0;
+    }
+}
+
+
+.container-full {
+    display: flex;
+    height: 100vh;
+}
+
+/* Gambar kiri tetap */
+.left {
+    width: 60%;
+    background-image: url('/Assets/gambar/image-cover.png'); /* Sesuaikan dengan gambar */
+    background-size: cover;
+    background-position: fixed;
+}
+
+.undangan-box {
+    margin: 310px 150px 0px 150px;
+    padding: 10px;
+    text-align: center;
+    justify-content: center;
+    font-family: "Italianno", cursive;
+    font-size: 30px;
+    box-shadow: 3px 4px 3px 4px rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+    backdrop-filter: blur(2px);
+    font-weight: bold;
+    color: #1a0404;
+    background-color: #ffffff57 ;
+}
+
+.hubungi {
+    display: flex;
+    flex-direction: row;
+    font-size: 20px;
+    font-family: "farsan", cursive;
+    justify-content: center;
+}
+
+.t {
+    padding-left: 25px;
+}
+
+h3 {
+    font-family: "lobster", sans-serif;
+    font-size: 28px;
+}
+
+/* Gambar kanan bisa scroll */
+.right {
+    width: 40%;
+    overflow-y: scroll;
+    box-sizing: border-box;
+}
+
+.container {
+    font-family: "Farsan", cursive;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.box-surah {
+    padding: 15px 25px;
+    border: 2px solid #9B355A;
+    margin: 20px 50px;
+    font-family: "Farsan", system-ui;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 20px;
+    box-shadow: 0 4px 4px  rgba(0, 0, 0, 0.3);
+    background-color: white;
+    position: relative;
+    animation: moveRightToLeft 3s ease-in-out forwards;
+}
+
+.bismillah {
+    font-size: 30px;
+    font-family: sans-serif;
+    animation: moveLeftToRight 3s ease-in-out forwards;
+    position: relative;
+}
+
+.surah-arrum21 {
+    font-family: "Playwrite CU", cursive;
+    font-size: 20px;
+    padding: 10px 20px;
+    text-align: right;
+}
+
+.arti-surah {
+    font-size: 15px;
+}
+
+.judul-surah {
+    font-size: 15px;
+}
+
+.t-isi {
+    margin: 0 50px;
+    font-size: 15px;
+    margin-bottom: 40px;
+    text-align: center;
+    opacity: 0;
+    animation: fadeIn 5s forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0; 
+    }
+    to {
+        opacity: 1; 
+    }
+}
+
+.box-pernikahan {
+    margin: 0 50px;
+    font-size: 15px;
+    line-height: 15px;
+    text-align: center;
+    background-color: #AD0542;
+    color: white;
+    border-radius: 20px;
+    border: 2px solid black;
+    padding: 10px 20px;
+    margin-bottom: 54px;
+    opacity: 0;
+    animation: fadeIn 5s forwards;
+}
+
+.countdown {
+    margin: 0 50px;
+    display: flex;
+    gap: 35px;
+    margin-bottom: 74px;
+}
+
+.box {
+    background-color: #E56090;
+    border-radius: 10px;
+    border: 1px solid black;
+    padding: 10px;
+    text-align: center;
+    width: 50px;
+    color: black;
+    font-size: 12px;
+    box-shadow: 0 4px 4px  rgba(0, 0, 0, 0.3);
+}
+
+.box span {
+    display: block;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.box div {
+    font-size: 15px;
+}
+
+.button-lokasi {
+    font-size: 20px;
+    text-decoration: none;
+    color: black;
+    opacity: 0;
+    animation: fadeIn 3s forwards;
+}
+
+.lokasi-button {
+    padding: 5px 60px;
+    border: 1px solid black;
+    border-radius: 10px;
+    background-color: #FFCBDE;
+    box-shadow: 0 4px 4px  rgba(0, 0, 0, 0.3);
+    margin-bottom: 20px;
+}
+
+.lokasi-button:hover {
+    background-color: #BF5F82;
+}
+
+
+.button-rsvp {
+    font-size: 20px;
+    text-decoration: none;
+    color: black;
+    opacity: 0;
+    animation: fadeIn 3s forwards;
+}
+
+
+.rsvp-button {
+    padding: 5px 32px;
+    border: 1px solid black;
+    border-radius: 8px;
+    background-color: #FFCBDE;
+    box-shadow: 0 4px 4px  rgba(0, 0, 0, 0.3);
+}
+
+.rsvp-button:hover {
+    background-color: #BF5F82;
+}
+
+.bg-isi-bottom {
+    max-width: 100%;
+    width: 100%;
+    margin-bottom: 40px;
+    animation: slideUp 3s ease-out;
+}
+
+.bottom-nav {
+    position: fixed;
+    bottom: 0;
+    width: 40%;
+    background-color: transparent; 
+}
+
+.nav-rectangle {
+    background-color: #FFA6C6; 
+    border-top: 2px solid #51001D;
+    border-radius: 10px 10px 0 0;
+    padding: 10px 15px;
+    margin: 0 auto; 
+    max-width: 100%;
+}
+
+.nav-scroll {
+    display: flex;
+    overflow-x: auto;
+    white-space: nowrap;
+    justify-content: center;
+    gap: 5%;
+    padding: 0 5px 0 15px;
+}
+
+.nav-item {
+    display: flex;
+    flex-direction: column;
+    padding: 5px 15px;
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center;
+    border: 2px solid #51001D;
+    border-radius: 10px;
+}
+
+.nav-item.active {
+    background-color: #9B355A;
+    border-radius: 10px;
+    border: 2px solid #51001D;
+    padding: 5px 15px;
+}
+
+.nav-item:hover {
+    background-color: #9B355A;
+    border: 2px solid #51001D;
+}
+
+.nav-icon {
+    width: 28px;
+    height: 28px;
+}
+
+.nav-item p {
+    margin: 0;
+    font-size: 10px;
+    font-family: "Farsan", system-ui;
+    color: black;
+}
+
+/* Scroll Bar Hidden */
+.nav-scroll::-webkit-scrollbar {
+    display: none;
+}
+
+@media (min-width: 400px) and (max-width: 767px) {
+    .right {
+        width: 100%;
+    }
+    
+    .left {
+        display: none;
+    }
+
+    .undangan-box {
+        visibility: hidden;
+    }
+
+    .hubungi {
+        visibility: hidden;
+    }
+
+    .bottom-nav {
+        width: 100%; 
+    }
+
+    .bg-isi-bottom {
+        margin-bottom: 55px;
+    }
+}
+
+@media (min-width: 0) and (max-width: 399px) {
+    .right {
+        width: 100%;
+    }
+    
+    .left {
+        display: none;
+    }
+
+    .undangan-box {
+        visibility: hidden;
+    }
+
+    .hubungi {
+        visibility: hidden;
+    }
+
+
+    .bottom-nav {
+        width: 100%; 
+    }
+
+    .bg-isi-bottom {
+        margin-bottom: 55px;
+    }
+
+    .countdown {
+        gap: 15px;
+    }
+
+    .nav-scroll {
+        padding: 0 5px 0 65px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    .right {
+        width: 100%;
+    }
+    
+    .left {
+        display: none;
+    }
+
+    .undangan-box {
+        visibility: hidden;
+    }
+
+    .hubungi {
+        visibility: hidden;
+    }
+
+    .bottom-nav {
+        width: 100%; 
+    }
+
+    .bg-isi-bottom {
+        margin-bottom: 55px;
+    }
+}
+
+@media (min-width: 1024px) and (max-width: 1500px) {
+    .right {
+        width: 40%;
+    }
+    
+    .left {
+        width: 60%;
+    }
+}

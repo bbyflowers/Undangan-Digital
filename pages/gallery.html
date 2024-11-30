@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="id">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Gallery</title> 
+        <link rel="stylesheet" href="/styles/gallery.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Damion&family=Farsan&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Farsan&family=Italianno&family=Lobster&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <iframe src="/pages/audio.html" style="display:none;" id="audio-frame"></iframe>
+        <div class="container-full">
+            <div class="left">
+                <div class="undangan-box">
+                    <h3>Ghifran & Aura</h3>
+                    <p> "Janganlah engkau menuntut pasanganmu untuk sempurna, tapi sempurnakanlah dirimu agar engkau mampu menutupi kekurangannya."</p>
+                    <div class="hubungi">
+                        <p class="t1">Instagram: @ar_store_mlbb</p>
+                        <p class="t">WhatsApp: 081917976652</p>
+                    </div>
+                </div>
+            </div>
+            <div class="right">
+        <img src="/Assets/background/bg-isitop.svg" alt="bg-isitop" class="bg-isi-top">
+        <div class="container">
+            <h1>Gallery Akad</h1>
+            <div class="gallery">
+                <div class="image-container" style="animation-delay: 3s;">
+                    <a href="/Assets/gambar/gallery3.png"><img class="foto-utama" src="/Assets/gambar/gallery3.png" alt="Foto 1"></a>
+                </div>
+                <div class="image-container2">
+                    <a href="/Assets/gambar/gallery2.png"><img src="/Assets/gambar/gallery2.png" alt="Foto 2"></a>
+                </div>
+                <div class="image-container3">
+                    <a href="/Assets/gambar/gallery1.png"><img src="/Assets/gambar/gallery1.png" alt="Foto 3"></a>
+                </div>
+                <div class="image-container4">
+                    <a href="/Assets/gambar/gallery4.png"><img src="/Assets/gambar/gallery4.png" alt="Foto 4"></a>
+                </div>
+                <div class="image-container5">
+                    <a href="/Assets/gambar/gallery5.png"><img src="/Assets/gambar/gallery5.png" alt="Foto 5"></a>
+                </div>
+            </div>
+            <div class="slideshow-container">
+                <!-- Slide 1 -->
+                <div class="mySlides fade">
+                    <img src="/Assets/gambar/gallery2.png" alt="Gambar 1" class="slide-img">
+                </div>
+            
+                <!-- Slide 2 -->
+                <div class="mySlides fade">
+                    <img src="/Assets/gambar/gallery1.png" alt="Gambar 2" class="slide-img">
+                </div>
+            
+                <!-- Slide 3 -->
+                <div class="mySlides fade">
+                    <img src="/Assets/gambar/gallery4.png" alt="Gambar 3" class="slide-img">
+                </div>
+            
+                <div class="mySlides fade">
+                    <img src="/Assets/gambar/gallery5.png" alt="Gambar 4" class="slide-img">
+                </div>
+            
+                <!-- Tombol Next dan Previous -->
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            </div>
+            
+            <!-- Titik Indikator -->
+            <div class="dot-container">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+                <span class="dot" onclick="currentSlide(4)"></span>
+            </div>
+            
+            <script>
+                let slideIndex = 1; // Menginisialisasi slideIndex dengan 1 untuk menunjukkan slide pertama
+            showSlides(slideIndex); // Menampilkan slide pertama saat halaman dimuat
+            
+            // Fungsi untuk menambah atau mengurangi slideIndex
+            function plusSlides(n) {
+                slideIndex += n; // Menambah atau mengurangi nilai slideIndex
+                showSlides(slideIndex); // Memperbarui tampilan slide
+            }
+            
+            // Fungsi untuk mengatur slideIndex ke slide tertentu
+            function currentSlide(n) {
+                slideIndex = n; // Mengatur slideIndex sesuai dengan input
+                showSlides(slideIndex); // Memperbarui tampilan slide
+            }
+            
+            // Fungsi untuk menampilkan slide yang sesuai dengan slideIndex
+            function showSlides(n) {
+                let i; // Variabel untuk loop
+                const slides = document.getElementsByClassName("mySlides"); // Mengambil semua elemen dengan class "mySlides"
+                const dots = document.getElementsByClassName("dot"); // Mengambil semua elemen dengan class "dot"
+            
+                if (n > slides.length) { // Jika slideIndex lebih besar dari jumlah slide
+                    slideIndex = 1; // Kembali ke slide pertama
+                } 
+                if (n < 1) { // Jika slideIndex kurang dari 1
+                    slideIndex = slides.length; // Kembali ke slide terakhir
+                }
+            
+                // Menyembunyikan semua slide
+                for (i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none"; // Mengatur display slide menjadi none
+                }
+            
+                // Menghapus class "active" dari semua dot
+                for (i = 0; i < dots.length; i++) {
+                    dots[i].className = dots[i].className.replace(" active", ""); // Menghapus class active
+                }
+            
+                slides[slideIndex - 1].style.display = "block"; // Menampilkan slide yang sesuai
+                dots[slideIndex - 1].className += " active"; // Menambahkan class active pada dot yang sesuai
+            }
+            
+            </script>
+            <script>
+            document.addEventListener("DOMContentLoaded", function() {
+                // Slideshow
+            
+                // Mendapatkan elemen container slideshow dengan class 'slides'
+                const slides = document.querySelector('.slides');
+                
+                // Menghitung jumlah elemen yang memiliki class 'slide', menyimpannya dalam slideCount
+                const slideCount = document.querySelectorAll('.slide').length;
+            
+                // Menginisialisasi index untuk melacak slide yang aktif
+                let index = 0;
+            
+                // Fungsi untuk menampilkan slide
+                function showSlide() {
+                    index++; // Menaikkan nilai index setiap kali fungsi ini dipanggil
+                    
+                    // Jika index lebih besar atau sama dengan jumlah slide, reset index ke 0 (kembali ke slide pertama)
+                    if (index >= slideCount) index = 0;
+            
+                    // Menggeser kontainer 'slides' menggunakan CSS transform untuk menampilkan slide yang sesuai
+                    slides.style.transform = `translateX(-${index * 100}%)`; // Menggeser ke kiri sebesar (index * 100) persen
+                    
+                    // Memanggil kembali fungsi showSlide setiap 3 detik (3000 milidetik)
+                    setTimeout(showSlide, 3000);
+                }
+            
+                // Memulai slideshow pertama kali saat halaman selesai dimuat
+                showSlide();
+            });
+            </script>
+        </div>
+        <img src="/Assets/background/bg-isibottom.svg" alt="bg-isibottom" class="bg-isi-bottom">
+        <div class="bottom-nav">
+            <div class="nav-rectangle">
+                <div class="nav-scroll">
+                    <a href="cover.html" class="nav-item">
+                        <img src="/Assets/icon/Journals.svg" alt="cover" class="nav-icon">
+                        <p>Cover</p>
+                    </a>
+                    <a href="mempelai.html" class="nav-item">
+                        <img src="/Assets/icon/People.svg" alt="Mempelai" class="nav-icon">
+                        <p>Mempelai</p>
+                    </a>
+                    <a href="acara.html" class="nav-item">
+                        <img src="/Assets/icon/Calendar2Event.svg" alt="Acara" class="nav-icon">
+                        <p>Acara</p>
+                    </a>
+                    <a href="gallery.html" class="nav-item active">
+                        <img src="/Assets/icon/Album.svg" alt="Gallery" class="nav-icon">
+                        <p>Gallery</p>
+                    </a>
+                    <a href="penutup.html" class="nav-item">
+                        <img src="/Assets/icon/Note.svg" alt="Penutup" class="nav-icon">
+                        <p>Penutup</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+        </div>
+        </div>
+
+        
+    </body>
+</html>

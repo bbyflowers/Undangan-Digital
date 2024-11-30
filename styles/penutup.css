@@ -1,0 +1,490 @@
+body {
+    margin: 0;
+    background-color: #FCEDF2;
+}
+
+.container-full {
+    display: flex;
+    height: 100vh;
+    overflow: hidden;
+}
+
+@keyframes moveRightToLeft {
+    0% {
+        left: 100%;
+    }
+    100% {
+        left: 0;
+    }
+}
+
+@keyframes moveLeftToRight {
+    0% {
+        Right: 100%;
+    }
+    100% {
+        Right: 0;
+    }
+}
+
+h1 {
+    margin-top: 40px;
+    color:#9B355A;
+    font-size: 30px;
+    font-family: "Damion", cursive;
+    text-align: center;
+    animation: slideIn 3s ease-out;
+}
+
+h2{
+    font-size: 25px;
+    text-align: center;
+}
+
+.text {
+    text-align: center;
+    font-size: 20px;
+    line-height: 25px;
+    position: relative;
+    animation: moveLeftToRight 3s ease-in-out forwards;
+}
+
+.doa {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 30px;
+    margin: 20px 0;
+    background-color: #fde5ed;
+    border-radius: 20px;
+    box-shadow: 3px 4px 3px 4px rgba(0, 0, 0, 0.2);
+    position: relative;
+    animation: moveRightToLeft 3s ease-in-out forwards;
+}
+
+.bismillah {
+    font-size: 25px;
+}
+
+.isi-doa {
+    margin-top: -5px;
+    font-size: 25px;
+    text-align: right;
+}
+
+.arti {
+    margin-top: -10px;
+    font-size: 16px;
+    text-align: center;
+}
+
+.nama-ortu {
+    color: #9B355A;
+    font-family: "Lobster Two", sans-serif;
+    margin: 5px 0;
+    font-size: 20px;
+    text-align: center;
+    position: relative;
+    animation: moveRightToLeft 3s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0; 
+    }
+    to {
+        opacity: 1; 
+    }
+}
+
+.button-gift {
+    font-size: 20px;
+    text-decoration: none;
+    color: black;
+    opacity: 0;
+    animation: fadeIn 3s forwards;
+}
+
+.gift-button {
+    margin-top: 30px;
+    padding: 7px 55px;
+    border: 1px solid black;
+    border-radius: 8px;
+    background-color: #E56090;
+    box-shadow: 0 4px 4px  rgba(0, 0, 0, 0.3);
+}
+
+.gift-button:hover {
+    background-color: #6d082d;
+    color: white;
+}
+
+.button-utama {
+    font-size: 20px;
+    text-decoration: none;
+    color: black;
+    opacity: 0;
+    animation: fadeIn 3s forwards;
+}
+
+.utama-button {
+    margin-top: 20px;
+    padding: 7px 25px;
+    border: 1px solid black;
+    border-radius: 8px;
+    background-color: #E56090;
+    box-shadow: 0 4px 4px  rgba(0, 0, 0, 0.3);
+}
+
+.utama-button:hover {
+    background-color: #1C1B1F;
+    color: white;
+}
+
+
+.penutup-container {
+    font-family: "Farsan", cursive;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 50px;
+}
+
+.left, .right {
+    overflow-y: hidden; 
+}
+
+.left {
+    width: 60%;
+    background-image: url('/Assets/gambar/image-cover.png'); 
+    background-size: cover;
+    background-position: fixed;
+}
+
+.undangan-box {
+    margin: 300px 150px 0px 150px;
+    padding: 10px;
+    text-align: center;
+    justify-content: center;
+    font-family: "Italianno", cursive;
+    font-size: 30px;
+    box-shadow: 3px 4px 3px 4px rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+    backdrop-filter: blur(2px);
+    font-weight: bold;
+    color: #1a0404;
+    background-color: #ffffff57 ;
+}
+
+.hubungi {
+    display: flex;
+    flex-direction: row;
+    font-size: 20px;
+    font-family: "farsan", cursive;
+    justify-content: center;
+}
+
+.t1 {
+    padding-right: 60px;
+    padding-left: 25px;
+}
+
+h3 {
+    font-family: "lobster", sans-serif;
+    font-size: 28px;
+}
+
+.right {
+    width: 40%;
+    overflow-y: scroll;
+    box-sizing: border-box;
+}
+
+.bg-isi-top {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: -50px;
+    width: 100%;
+    animation: slideIn 3s ease-out;
+}
+
+@keyframes slideIn {
+    from { transform: translateY(-100%);}
+    to { transform: translateY(0);}
+}
+
+@keyframes slideUp {
+    from {
+      transform: translateY(100%); 
+      opacity: 1; 
+    }
+    to {
+      transform: translateY(0); 
+      opacity: 1;
+    }
+}
+
+.bg-isi-bottom {
+    max-width: 100%;
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 40px;
+    animation: slideUp 3s ease-out;
+}
+
+.bottom-nav {
+    position: fixed;
+    bottom: 0;
+    width: 40%;
+    background-color: transparent; 
+}
+
+.nav-rectangle {
+    background-color: #FFA6C6; 
+    border-top: 2px solid #51001D;
+    border-radius: 10px 10px 0 0;
+    padding: 10px 15px;
+    margin: 0 auto; 
+    max-width: 100%;
+}
+
+.nav-scroll {
+    display: flex;
+    overflow-x: auto;
+    white-space: nowrap;
+    justify-content: center;
+    gap: 5%;
+    padding: 0 5px 0 15px;
+}
+
+.nav-item {
+    display: flex;
+    flex-direction: column;
+    padding: 5px 15px;
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center;
+    border: 2px solid #51001D;
+    border-radius: 10px;
+}
+
+.nav-item.active {
+    background-color: #9B355A;
+    border-radius: 10px;
+    border: 2px solid #51001D;
+    padding: 5px 15px;
+}
+
+.nav-item:hover {
+    background-color: #9B355A;
+    border: 2px solid #51001D;
+}
+
+.nav-icon {
+    width: 28px;
+    height: 28px;
+}
+
+.nav-item p {
+    margin: 0;
+    font-size: 10px;
+    font-family: "Farsan", system-ui;
+    color: black;
+}
+
+/* Scroll Bar Hidden */
+.nav-scroll::-webkit-scrollbar {
+    display: none;
+}
+
+@media (min-width: 0) and (max-width: 767px) {
+    .right {
+        width: 100%;
+    }
+    
+    .left {
+        width: 0;
+    }
+
+    .undangan-box {
+        visibility: hidden;
+    }
+
+    .hubungi {
+        visibility: hidden;
+    }
+
+    .bottom-nav {
+        width: 100%; 
+    }
+
+    h1 {
+        font-size: 30px;
+    }
+    
+    h2{
+        font-size: 25px;
+        text-align: center;
+    }
+    
+    .text {
+        text-align: center;
+        font-size: 20px;
+        line-height: 25px;
+    }
+    
+    .doa {
+        padding: 10px 30px;
+        margin: 20px 0;
+    }
+    
+    .bismillah {
+        font-size: 25px;
+    }
+    
+    .isi-doa {
+        margin-top: -5px;
+        font-size: 25px;
+    }
+    
+    .arti {
+        margin-top: -10px;
+        font-size: 16px;
+    }
+    
+    .nama-ortu {
+        margin: 5px 0;
+        font-size: 20px;
+    }
+    
+    .button-gift {
+        font-size: 20px;
+    }
+    
+    .gift-button {
+        margin-top: 30px;
+        padding: 7px 55px;
+    }
+    
+    
+    .button-utama {
+        font-size: 20px;
+        text-decoration: none;
+        color: black;
+    }
+    
+    .utama-button {
+        margin-top: 20px;
+        padding: 7px 25px;
+    }
+    
+    .penutup-container {
+        padding: 0 50px;
+    }
+
+    .nav-scroll {
+        padding: 0 4px 0 65px;
+    }
+
+    .bg-isi-bottom {
+        margin-bottom: 15px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    .right {
+        width: 100%;
+    }
+    
+    .left {
+        width: 0;
+    }
+
+    .bottom-nav {
+        width: 100%; 
+    }
+
+    .undangan-box {
+        visibility: hidden;
+    }
+
+    .hubungi {
+        visibility: hidden;
+    }
+
+    h1 {
+        font-size: 35px;
+    }
+    
+    h2{
+        font-size: 30px;
+        text-align: center;
+    }
+    
+    .text {
+        font-size: 25px;
+        line-height: 25px;
+    }
+    
+    .doa {
+        padding: 10px 30px;
+        margin: 25px 0;
+    }
+    
+    .bismillah {
+        font-size: 30px;
+    }
+    
+    .isi-doa {
+        margin-top: -5px;
+        font-size: 30px;
+    }
+    
+    .arti {
+        margin-top: -10px;
+        font-size: 21px;
+    }
+    
+    .nama-ortu {
+        margin: 5px 0;
+        font-size: 25px;
+    }
+    
+    .button-gift {
+        font-size: 25px;
+    }
+    
+    .gift-button {
+        margin-top: 30px;
+        padding: 7px 62px;
+    }
+    
+    
+    .button-utama {
+        font-size: 25px;
+        text-decoration: none;
+        color: black;
+    }
+    
+    .utama-button {
+        margin-top: 20px;
+        padding: 7px 25px;
+    }
+    
+    .penutup-container {
+        padding: 0 50px;
+    }
+}
+
+
+@media (min-width: 1024px) and (max-width: 1500px) {
+    .right {
+        width: 40%;
+    }
+    
+    .left {
+        width: 60%;
+    }
+}

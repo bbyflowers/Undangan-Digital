@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Wedding Invitation</title>
+</head>
+<body>
+
+    <!-- Audio yang akan terus berjalan -->
+    <audio id="bg-audio" autoplay loop>
+        <source src="/Assets/audio/Melly Ft.Amee - Ketika Cinta Bertasbih.mp3" type="audio/mp3">
+    </audio>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const audioElement = document.getElementById('bg-audio');
+
+            // Cek apakah sudah ada waktu playback yang disimpan di LocalStorage
+            const savedTime = localStorage.getItem('audioTime');
+            if (savedTime !== null) {
+                audioElement.currentTime = savedTime;
+            }
+
+            // Simpan waktu audio sebelum halaman di-reload atau ditutup
+            window.addEventListener('beforeunload', function () {
+                localStorage.setItem('audioTime', audioElement.currentTime);
+            });
+        });
+    </script>
+
+</body>
+</html>
