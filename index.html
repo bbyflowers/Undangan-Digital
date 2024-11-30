@@ -4,13 +4,13 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title> Undangan Pernikahan Digital</title> 
-        <link rel="stylesheet" href="/styles/style.css">
+        <link rel="stylesheet" href="style.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Farsan&family=Italianno&family=Lobster&display=swap" rel="stylesheet">
     </head>
     <body>
-        <iframe src="/pages/audio.html" style="display:none;" id="audio-frame"></iframe>
+        <iframe src="audio.html" style="display:none;" id="audio-frame"></iframe>
     <div class="container-full">
         <div class="left">
             <div class="undangan-box">
@@ -25,11 +25,11 @@
         <div class="right">
             <div class="content">
         <header class="cover">
-            <img src="/Assets/background/bg-covertop.svg" alt="bg-covertop" class="bg-cover-top">
+            <img src="bg-covertop.svg" alt="bg-covertop" class="bg-cover-top">
             <div class="container">
                 <h1 class="name-invitation" style="animation-delay: 3s;">Undangan</h1>
                 <h1 class="name-invitation2" style="animation-delay: 3s;">Resepsi Pernikahan</h1>
-                <img src="/Assets/gambar/image-cover.png" alt="image-cover" class="img-cover" style="animation-delay: 4s;">
+                <img src="image-cover.png" alt="image-cover" class="img-cover" style="animation-delay: 4s;">
                 <h2 class="name-wedding" style="animation-delay: 5s;">Ghifran & Aura</h2>
                 <p class="t-cover" style="animation-delay: 6s;">Kepada:</p>
                 <p class="t-cover" style="animation-delay: 6s;">Bapak/Ibu/Saudara/i. Kami mengundang anda untuk</p>
@@ -37,11 +37,11 @@
             </div>
         </header>
         <div class="button-cover" style="animation-delay: 7s;">
-            <a href ="/pages/mempelai.html" class="button-cover">
-                <div class="button-open"><img id="toggleIcon" src="/Assets/icon/mail.svg" alt="mail-undangan" class= "icon-mail">Buka Undangan</div>
+            <a href ="mempelai.html" class="button-cover">
+                <div class="button-open"><img id="toggleIcon" src="mail.svg" alt="mail-undangan" class= "icon-mail">Buka Undangan</div>
             </a>
         </div>
-        <img src="/Assets/background/bg-coverbottom.svg" alt="bg-coverbottom" class="bg-cover-bottom">
+        <img src="bg-coverbottom.svg" alt="bg-coverbottom" class="bg-cover-bottom">
     </div>
 </div>
 
@@ -51,11 +51,11 @@
         
         // Event listener untuk ikon
         icon.addEventListener('click', function() {
-            if (icon.src.includes('/Assets/icon/mail.svg')) {
-                icon.src = '/Assets/icon/love-letter.svg';
+            if (icon.src.includes('mail.svg')) {
+                icon.src = 'love-letter.svg';
                 icon.classList.add('large');
             } else {
-                icon.src = '/Assets/icon/mail.svg';
+                icon.src = 'mail.svg';
                 icon.classList.remove('large');
             }
         });
